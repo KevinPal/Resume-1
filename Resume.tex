@@ -1,0 +1,58 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{listings}
+\usepackage[pages=some]{background}
+\usepackage{enumitem}
+\usepackage[nodayofweek, level]{datetime}
+%\backgroundsetup{
+%scale=1,
+%color=black,
+%opacity=0.0,
+%angle=0,
+%contents={%
+%\includegraphics[width=\paperwidth,height=\paperheight]{WoodOverlayA4.png}
+%}%
+%}
+\titleformat{\section}{\vspace{-2mm}\huge\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titleformat{\subsubsection}[runin]{}{}{0em}{}[ --- ]
+\newcommand\textbox[1]{%
+	\parbox{.333\textwidth}{#1}%
+}
+\renewcommand{\maketitle}{
+	\begin{center}
+		\noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge Kevin Zheng\hfil}\textbox{\hfill \today}
+		{zhengkevin256@gmail.com --- (669) 350-9233 --- github.com/coffeevector --- coffeevector.github.io}
+	\end{center} }
+\pagenumbering{gobble}
+\begin{document}
+\maketitle
+\section{Education}
+Evergreen Valley High School\null\hfill (2014 - 2018)\\
+\emph{High School Diploma}\null\hfill AP Computer Science A, AP Statistics, AP Physics C: Mech \& EM\\~\\
+Evergreen Valley College\null\hfill (2016 - 2018)\\
+\null\hfill Calculus II, Multivariable Calculus, Linear Algebra\\~\\
+University of California, Merced\null\hfill(2018 - \emph{Expected} May 2021)\newline
+\emph{Bachelor of Science, Computer Science and Engineering}\null\hfill Data Structures, Introductory Physics II
+\section{Technical Skills}
+\subsection{Languages}
+Expert in Java, proficient in C\verb!++!, Python, GoLang, Kotlin, and Javascript
+\subsection{Operating Systems}
+Linux, Windows, Android
+\vspace*{-2mm}
+\subsection{Other}
+git, vim, bash/zsh, ReactJS
+\section{Projects}
+	\subsection{SPARK Final Project --- 2018 \null\hfill Merced, CA}
+	\par Made data analysis code that interpreted oscilloscope data to find the speed of light.
+	\subsection{EVHS Robotics (FIRST Robotics) --- 2018 \null\hfill San Jose, CA}
+	\par Contributed to computer vision code in C++ and Java that automatically detected and handled yellow cubes on a playing field.
+	\subsection{AP Computer Science A Final Project --- 2018 \null\hfill San Jose, CA}
+	\par Created a horror game centered around math with a group. Was responsible for generating math problems that included arithmetic, derivatives, integrals, etc., during runtime. Project was written in Java.
+	\subsection{Google foobar --- 2018 \null\hfill San Jose, CA}
+	\par Completed all levels (1 - 5) of the Google foobar coding challenge twice.
+	My solutions had been written in Java with occasional Python.
+\end{document}
