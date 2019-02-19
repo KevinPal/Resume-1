@@ -7,6 +7,7 @@
 \usepackage{listings}
 \usepackage{enumitem}
 \usepackage[nodayofweek, level]{datetime}
+\usepackage{subfiles}
 \titleformat{\section}{\vspace{-2mm}\huge\bfseries}{}{0em}{}[\titlerule]
 \titleformat{\subsection}{\large\bfseries}{}{0em}{}
 \titleformat{\subsubsection}[runin]{}{}{0em}{}[ --- ]
@@ -21,33 +22,8 @@
 \pagenumbering{gobble}
 \begin{document}
 \maketitle
-\section{Education}
-University of California, Merced\null\hfill(2018 - \emph{Expected} May 2021)\\
-\emph{Bachelor of Science, Computer Science and Engineering}
-\begin{center}
-	Calculus I/II, Multivariable Calculus, Linear Algebra, Data Structures, Introductory Physics II
-\end{center}
-\section{Technical Skills}
-	\subsection{Programming Languages}
-	Expert in Java and C/C\verb!++!, proficient in Python, GoLang, and Kotlin
-	\vspace*{-2mm}
-	\subsection{Web Development}
-	React, Javascript, Google Analytics, HTML, and CSS
-	\vspace*{-2mm}
-	\subsection{Other}
-	Linux, git, statistics, Android Studio, vim, bash/zsh, {\LaTeX}
-\section{Projects}
-	\subsection{SPARK Final Project --- 2018 \null\hfill Merced, CA}
-	\par Contributed data analysis code to interpreted oscilloscope data to find the speed of light in Python.
-	\vspace*{-2mm}
-	\subsection{EVHS Robotics (FIRST Robotics) --- 2018 \null\hfill San Jose, CA}
-	\par Contributed to computer vision code in C++ and Java that automatically detected and handled yellow cubes on a playing field.
-	\vspace*{-2mm}
-	\subsection{AP Computer Science A Final Project --- 2018 \null\hfill San Jose, CA}
-	\par Created a horror game centered around math with a group. Was responsible for generating math problems that included arithmetic, derivatives, integrals, etc., during runtime.
-	\vspace*{-2mm}
-	\subsection{Google foobar --- 2018 \null\hfill San Jose, CA}
-	\par Completed all levels (1 - 5) of the Google foobar coding challenge twice and had been reached out by Google on both occasions.
-\section{Awards and Certifications}
-	{\bfseries AMATYC} Student Mathematics League --- Certificate of Merit
+\subfile{education.tex}
+\subfile{techskills.tex}
+\subfile{projects.tex}
+\subfile{awards.tex}
 \end{document}
