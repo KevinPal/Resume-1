@@ -1,3 +1,5 @@
 *.aux
 *.log
+*.pdf
+!Resume.pdf
 tags
