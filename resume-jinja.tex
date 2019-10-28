@@ -9,6 +9,9 @@
 \usepackage[nodayofweek, level]{datetime}
 \usepackage{subfiles}
 \usepackage{fontawesome}
+\usepackage{hyperref}
+
+\hypersetup{hidelinks}
 \titleformat{\section}{\vspace{-2mm}\huge\bfseries}{}{0em}{}[\titlerule]
 \titleformat{\subsection}{\large\bfseries}{}{0em}{}
 \titleformat{\subsubsection}[runin]{}{}{0em}{}[ --- ]
@@ -18,7 +21,7 @@
 \renewcommand{\maketitle}{
     \begin{center}
         \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge Kevin Zheng\hfil}\textbox{\hfill \today}
-        {\faEnvelope \enskip zhengkevin256@gmail.com --- \faPhone \enskip (669) 350-9233 --- \faGithub \enskip github.com/coffeevector --- \faChain \enskip \underline{\color{blue}coffeevector.xyz}}
+        {\faEnvelope \enskip zhengkevin256@gmail.com --- \faPhone \enskip (669) 350-9233 --- \faGithub \enskip \underline{\color{blue}\href{https://github.com/CoffeeVector}{github.com/CoffeeVector}} --- \faChain \enskip \underline{\color{blue}\href{https://coffeevector.xyz}{coffeevector.xyz}}}
     \end{center} }
 \pagenumbering{gobble}
 \begin{document}
