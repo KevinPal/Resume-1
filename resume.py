@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
 import jinja2
-import os
 from jinja2 import Template
+from jinja2 import PackageLoader
 
 latex_jinja_env = jinja2.Environment(
     block_start_string = '\BLOCK{',
@@ -15,10 +14,10 @@ latex_jinja_env = jinja2.Environment(
     line_comment_prefix = '%#',
     trim_blocks = True,
     autoescape = False,
-    loader = jinja2.FileSystemLoader(os.path.abspath('.'))
+    loader = jinja2.PackageLoader('resume', 'templates')
 )
 
-template = latex_jinja_env.get_template('resume-jinja.tex')
+resume_template = latex_jinja_env.get_template('Resume.tex')
 
 experiences = [
     {
@@ -67,7 +66,7 @@ for skillset in skillsets:
     skillset["skills"] = ", ".join(skillset["skills"])
 
 with open('Resume.tex', 'w+') as f:
-    f.write(template.render(
+    f.write(resume_template.render(
         experiences=experiences,
         projects=projects,
         skillsets=skillsets
