@@ -65,9 +65,20 @@ skillsets = [
 for skillset in skillsets:
     skillset["skills"] = ", ".join(skillset["skills"])
 
+major_gpa = {
+    "name": "Major GPA",
+    "value": 3.9
+}
+
+gpa = {
+    "name": "GPA",
+    "value": 3.8
+}
+
 with open('Resume.tex', 'w+') as f:
     f.write(resume_template.render(
         experiences=experiences,
         projects=projects,
-        skillsets=skillsets
+        skillsets=skillsets,
+        gpa=major_gpa
     ))
