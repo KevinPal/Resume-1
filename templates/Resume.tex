@@ -11,10 +11,9 @@
 \usepackage{fontawesome}
 \usepackage{hyperref}
 
-\hypersetup{hidelinks}
 \titleformat{\section}{\vspace{-2mm}\huge\bfseries}{}{0em}{}[\titlerule]
 \titleformat{\subsection}{\large\bfseries}{}{0em}{}
-\titleformat{\subsubsection}[runin]{}{}{0em}{}[ --- ]
+\titleformat{\subsubsection}[runin]{\bfseries}{}{0em}{}[ --- ]
 \newcommand\textbox[1]{%
     \parbox{.333\textwidth}{#1}%
 }
@@ -40,16 +39,19 @@
 %% endfor
 \section{Technical Skills}
 %% for skillset in skillsets:
-    \subsection{\VAR{skillset.name}}
+    \\VAR{'subsubsection' if short_skills else 'subsection' }{\VAR{skillset.name}}
     \VAR{skillset.skills}
     \vspace*{-4mm}
 %% endfor
 \section{Education}
-University of California, Merced\null\hfill \VAR{'{name}: {gpa}\quad'.format(name=gpa.name, gpa=gpa.value) if gpa else ''} (2018 - \emph{Expected} May 2021)\\
-           \emph{Bachelor of Science, Computer Science and Engineering}
-    \\\textbf{AMATYC} Student Mathematics League --- Certificate of Merit\\
+    University of California, Merced\null\hfill \VAR{'{name}: {gpa}\quad'.format(name=gpa.name, gpa=gpa.value) if gpa else ''} (2018 - \emph{Expected} May 2021)\\
+    \emph{Bachelor of Science, Computer Science and Engineering}
+    %% if coursework
+    \begin{center}
+        \textbf{Related Coursework} --- \VAR{coursework}
+    \end{center}
+    %% endif
+    \textbf{AMATYC} Student Mathematics League --- Certificate of Merit\\
     \textbf{UCM Integration Bee} 1\textsuperscript{st} Place in undergraduate bracket\\
     \textbf{UCM Chancellor's Honor List}
-    \vspace*{-2mm}
-%\subfile{awards.tex}
 \end{document}

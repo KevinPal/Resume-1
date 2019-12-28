@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!venv/bin/python3
 import jinja2
 from jinja2 import Template
 from jinja2 import PackageLoader
@@ -44,6 +44,11 @@ projects = [
         "title": "Google foobar",
         "date": "2018",
         "description": """Completed all levels (1 - 5) of the Google foobar coding challenge twice and had been reached out by Google on both occasions."""
+    },
+    {
+        "title": "SPARK Final Project",
+        "date": "2018",
+        "description": """Contributed data analysis code to interpreted oscilloscope data to find the speed of light in Python."""
     }
 ]
 
@@ -58,12 +63,18 @@ skillsets = [
     },
     {
         "name": "Other",
-        "skills": ["Linux", "git", "Android Studio", "bash/zsh", "\LaTeX", "docker", "computer networking"]
+        "skills": ["AWS", "Linux", "\LaTeX", "docker", "computer networking", "Android Studio"]
     }
 ]
 
 for skillset in skillsets:
     skillset["skills"] = ", ".join(skillset["skills"])
+
+math_coursework = ["Probability and Statistics", "Linear Algebra & Differential Equations", "Multivariable Calculus"]
+cs_coursework = ["Data Structures", "Discrete Mathematics", "Circuit Theory"]
+phys_coursework = ["Special Relativity", "Thermal Physics"]
+
+coursework = ", ".join(cs_coursework)
 
 major_gpa = {
     "name": "Major GPA",
@@ -75,10 +86,14 @@ gpa = {
     "value": 3.8
 }
 
+short_skills = True
+
 with open('Resume.tex', 'w+') as f:
     f.write(resume_template.render(
         experiences=experiences,
         projects=projects,
         skillsets=skillsets,
-        gpa=major_gpa
+        gpa=major_gpa,
+        short_skills=short_skills,
+        coursework=coursework
     ))
