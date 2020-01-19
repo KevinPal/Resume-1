@@ -19,6 +19,10 @@ latex_jinja_env = jinja2.Environment(
 
 resume_template = latex_jinja_env.get_template('Resume.tex')
 
+config = {
+    "short_skills": True
+}
+
 experiences = [
     {
         "title": "Software Engineering Intern",
@@ -86,14 +90,13 @@ gpa = {
     "value": 3.8
 }
 
-short_skills = True
 
 with open('Resume.tex', 'w+') as f:
     f.write(resume_template.render(
+        config=config,
         experiences=experiences,
         projects=projects,
         skillsets=skillsets,
         gpa=major_gpa,
-        short_skills=short_skills,
         coursework=coursework
     ))

@@ -39,7 +39,7 @@
 %% endfor
 \section{Technical Skills}
 %% for skillset in skillsets:
-    \\VAR{'subsubsection' if short_skills else 'subsection' }{\VAR{skillset.name}}
+    \\VAR{'subsubsection' if config.short_skills else 'subsection' }{\VAR{skillset.name}}
     \VAR{skillset.skills}
     \vspace*{-4mm}
 %% endfor
