@@ -4,7 +4,7 @@ import json
 
 import jinja2
 
-ME_PATH = "me/me.json"
+ME_PATH = "./me.json"
 
 def load_me():
     """
@@ -44,11 +44,8 @@ skillsets = me['career']['skillsets']
 for skillset in skillsets: # comma separating skills from skillsets
     skillset["skills"] = ", ".join(skillset["skills"])
 
-coursework = ", ".join(me['academics']['relevant_coursework']['cs'])
-
-major_gpa = me['academics']['major_gpa']
-gpa = me['academics']['gpa']
-
+coursework = " --- ".join([x for x in reversed(me['academics']['relevant_coursework']['cs'])])
+user = me['user']
 
 with open('Resume.tex', 'w+') as f:
     f.write(resume_template.render(
@@ -56,6 +53,6 @@ with open('Resume.tex', 'w+') as f:
         experiences=experiences,
         projects=projects,
         skillsets=skillsets,
-        gpa=major_gpa,
-        coursework=coursework
+        coursework=coursework,
+        **me
     ))

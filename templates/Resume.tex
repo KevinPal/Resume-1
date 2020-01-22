@@ -19,8 +19,8 @@
 }
 \renewcommand{\maketitle}{
     \begin{center}
-        \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge Kevin Zheng\hfil}\textbox{\hfill \today}
-        {\faEnvelope \enskip zhengkevin256@gmail.com --- \faPhone \enskip (669) 350-9233 --- \faGithub \enskip \underline{\color{blue}\href{https://github.com/CoffeeVector}{github.com/CoffeeVector}} --- \faChain \enskip \underline{\color{blue}\href{https://coffeevector.xyz}{coffeevector.xyz}}}
+        \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge \VAR{user.name} \hfil}\vspace{3mm}\textbox{\hfill \today}
+        {\faEnvelope \enskip \VAR{user.email} --- \faPhone \enskip \VAR{user.phone} --- \faGithub \enskip \underline{\href{\VAR{user.giturl}}{\VAR{user.gitnice}}}}
     \end{center} }
 \pagenumbering{gobble}
 \begin{document}
@@ -44,14 +44,11 @@
     \vspace*{-4mm}
 %% endfor
 \section{Education}
-    University of California, Merced\null\hfill (2018 - \emph{Expected} May 2021)\\
-    \emph{Bachelor of Science, Computer Science and Engineering}\null\hfill \VAR{'{name}: {gpa}'.format(name=gpa.name, gpa=gpa.value) if gpa else ''}
+    {\large\textbf{\VAR{academics.school}}}\null\hfill (2018 - May 2022)\\
+    \emph{\VAR{academics.degree}}\null\hfill 
     %% if coursework
     \begin{center}
         \textbf{Related Coursework} --- \VAR{coursework}
     \end{center}
     %% endif
-    \textbf{AMATYC} Student Mathematics League --- Certificate of Merit\\
-    \textbf{UCM Integration Bee} 1\textsuperscript{st} Place in undergraduate bracket\\
-    \textbf{UCM Chancellor's Honor List}
 \end{document}
