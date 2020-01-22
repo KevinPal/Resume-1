@@ -1,7 +1,19 @@
 #!venv/bin/python3
+import os
+import json
+
 import jinja2
-from jinja2 import Template
-from jinja2 import PackageLoader
+
+ME_PATH = "me/me.json"
+
+def load_me():
+    """
+    Loads "me" information from ME_PATH
+    """
+    with open(ME_PATH, "r") as f:
+        return json.loads(f.read())
+
+me = load_me()
 
 latex_jinja_env = jinja2.Environment(
     block_start_string = '\BLOCK{',
@@ -23,72 +35,19 @@ config = {
     "short_skills": True
 }
 
-experiences = [
-    {
-        "title": "Software Engineering Intern",
-        "organization": "Quantum Corp",
-        "date": "May 2019 - Present",
-        "description": """Worked on Quantum Managed Services, a service which allows Quantum to co-manage on-premise appliances from remote.
-Contracted by ProUnlimited."""
-    }
-]
+experiences = me['career']['experience']
 
-projects = [
-    {
-        "title": "Ludum Dare (Game Jam): Life is Currency",
-        "date": "April 2019",
-        "description": """Used Two.js to make a Tower Defense browser game in a team with one other where the only way to make currency is to lose health."""
-    },
-    {
-        "title": "Hack Merced: On My Way",
-        "date": "March 2019",
-        "description": """Used ReactJS to make an alternative graduation requirement planner with the aim of being faster and more user friendly."""
-    },
-    {
-        "title": "Google foobar",
-        "date": "2018",
-        "description": """Completed all levels (1 - 5) of the Google foobar coding challenge twice and had been reached out by Google on both occasions."""
-    },
-    {
-        "title": "SPARK Final Project",
-        "date": "2018",
-        "description": """Contributed data analysis code to interpreted oscilloscope data to find the speed of light in Python."""
-    }
-]
+projects = me['career']['projects']
 
-skillsets = [
-    {
-        "name": "Programming Languages",
-        "skills": ["Java", "C/C\\verb!++!", "Python", "GoLang", "Kotlin", "php"]
-    },
-    {
-        "name": "Web Development",
-        "skills": ["React", "Laravel", "Javascript", "Google Analytics", "Two.js", "HTML", "CSS"]
-    },
-    {
-        "name": "Other",
-        "skills": ["AWS", "Linux", "\LaTeX", "docker", "computer networking", "Android Studio"]
-    }
-]
+skillsets = me['career']['skillsets']
 
-for skillset in skillsets:
+for skillset in skillsets: # comma separating skills from skillsets
     skillset["skills"] = ", ".join(skillset["skills"])
 
-math_coursework = ["Probability and Statistics", "Linear Algebra & Differential Equations", "Multivariable Calculus"]
-cs_coursework = ["Data Structures", "Discrete Mathematics", "Circuit Theory"]
-phys_coursework = ["Special Relativity", "Thermal Physics"]
+coursework = ", ".join(me['academics']['relevant_coursework']['cs'])
 
-coursework = ", ".join(cs_coursework)
-
-major_gpa = {
-    "name": "Major GPA",
-    "value": 3.9
-}
-
-gpa = {
-    "name": "GPA",
-    "value": 3.8
-}
+major_gpa = me['academics']['major_gpa']
+gpa = me['academics']['gpa']
 
 
 with open('Resume.tex', 'w+') as f:
