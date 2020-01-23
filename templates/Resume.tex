@@ -1,9 +1,9 @@
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage{multicol}
 \usepackage{vwcol}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 \usepackage{listings}
 \usepackage{enumitem}
 \usepackage[nodayofweek, level]{datetime}
@@ -11,44 +11,48 @@
 \usepackage{fontawesome}
 \usepackage{hyperref}
 
-\titleformat{\section}{\vspace{-2mm}\huge\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titleformat{\section}{\vspace{-2mm}\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
 \titleformat{\subsubsection}[runin]{\bfseries}{}{0em}{}[ --- ]
 \newcommand\textbox[1]{%
     \parbox{.333\textwidth}{#1}%
 }
 \renewcommand{\maketitle}{
     \begin{center}
-        \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge \VAR{user.name} \hfil}\vspace{3mm}\textbox{\hfill \today}
-        {\faEnvelope \enskip \VAR{user.email} --- \faPhone \enskip \VAR{user.phone} --- \faGithub \enskip \underline{\href{\VAR{user.giturl}}{\VAR{user.gitnice}}}}
+        \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge \VAR{user.name} \hfil}\vspace{3mm}\textbox{\hfill}
+        {\faEnvelope \enskip \VAR{user.email} --- \faPhone \enskip \VAR{user.phone} --- \faHome \enskip \VAR{user.address} --- \faGithub \enskip \underline{\href{\VAR{user.giturl}}{\VAR{user.gitnice}}}}
     \end{center} }
 \pagenumbering{gobble}
 \begin{document}
 \maketitle
-\section{Experience}
+\section{Education}
+    {\textbf{\VAR{academics.school}}}\null\hfill\textbf{\VAR{academics.gradyear}}\\
+    \emph{\VAR{academics.degree}} \null\hfill \emph{\VAR{academics.year}}\\
+    \vspace*{-4mm}\\
+    %% if coursework
+    \textbf{Related Coursework}:\\ \VAR{coursework}
+    %% endif
+\section{Technical Skills}
+%% for skillset in skillsets:
+    \\VAR{'subsubsection' if config.short_skills else 'subsection' }{\VAR{skillset.name}}
+    \VAR{skillset.skills}
+    \vspace*{-2mm}
+%% endfor
+\section{Work Experience}
 %% for experience in experiences:
-    \subsection{\VAR{experience.title} -- \VAR{experience.organization}\null\hfill \VAR{experience.date}}
+    \subsection{\VAR{experience.company} \null\hfill \VAR{experience.date}}
+    \vspace*{-2mm}
+    \emph{\VAR{experience.role}} \null\hfill \emph{\VAR{experience.location}}
+    \vspace*{1mm}
+
     \VAR{experience.description}
     \vspace*{-2mm}
 %% endfor
 \section{Projects}
 %% for project in projects:
-    \subsection{\VAR{project.title}\null\hfill \VAR{project.date}}
+    \subsection{\VAR{project.title} \null\hfill \VAR{project.date}}
+    \vspace*{-2mm}
     \VAR{project.description}
     \vspace*{-2mm}
 %% endfor
-\section{Technical Skills}
-%% for skillset in skillsets:
-    \\VAR{'subsubsection' if config.short_skills else 'subsection' }{\VAR{skillset.name}}
-    \VAR{skillset.skills}
-    \vspace*{-4mm}
-%% endfor
-\section{Education}
-    {\large\textbf{\VAR{academics.school}}}\null\hfill (2018 - May 2022)\\
-    \emph{\VAR{academics.degree}}\null\hfill 
-    %% if coursework
-    \begin{center}
-        \textbf{Related Coursework} --- \VAR{coursework}
-    \end{center}
-    %% endif
 \end{document}

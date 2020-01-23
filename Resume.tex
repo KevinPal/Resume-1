@@ -1,9 +1,9 @@
-\documentclass[letterpaper,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 \usepackage{multicol}
 \usepackage{vwcol}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 \usepackage{listings}
 \usepackage{enumitem}
 \usepackage[nodayofweek, level]{datetime}
@@ -11,48 +11,69 @@
 \usepackage{fontawesome}
 \usepackage{hyperref}
 
-\titleformat{\section}{\vspace{-2mm}\huge\bfseries}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titleformat{\section}{\vspace{-2mm}\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
 \titleformat{\subsubsection}[runin]{\bfseries}{}{0em}{}[ --- ]
 \newcommand\textbox[1]{%
     \parbox{.333\textwidth}{#1}%
 }
 \renewcommand{\maketitle}{
     \begin{center}
-        \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge Kevin Palani \hfil}\vspace{3mm}\textbox{\hfill \today}
-        {\faEnvelope \enskip kevinrp2@illinois.edu --- \faPhone \enskip 408-893-0826 --- \faGithub \enskip \underline{\href{https://github.com/KevinPal}{github.com/KevinPal}}}
+        \noindent\textbox{\hfill}\textbox{\hfil\bfseries\huge Kevin Palani \hfil}\vspace{3mm}\textbox{\hfill}
+        {\faEnvelope \enskip kevinrp2@illinois.edu --- \faPhone \enskip 408-893-0826 --- \faHome \enskip San Jose, California --- \faGithub \enskip \underline{\href{https://github.com/KevinPal}{github.com/KevinPal}}}
     \end{center} }
 \pagenumbering{gobble}
 \begin{document}
 \maketitle
-\section{Experience}
-    \subsection{Software Engineering Intern -- Quantum Corp\null\hfill May 2019 - Present}
-    Working on Quantum Managed Services, a set of services which allows Quantum support to monitor and repair on-premise appliances remotely. Also created many automated cost analysis tools.
-    \vspace*{-2mm}
-    \subsection{Software Engineering Intern -- Nebbiolo Technologies\null\hfill June - August 2018}
-    Extended the data pipeline to allow for distributed analysis of the data, and upgraded the data visualizer to allow viewing from the cloud
-    \vspace*{-2mm}
-\section{Projects}
-    \subsection{3D Renderer in SystemVerilog on an FPGA\null\hfill November - December 2019}
-    Developed a GPU on a CycloneIV FPGA capable of arbitrary texured 3D rendering, and used it within an Avalon SOC along with the Intel NIOS II processor to build a sample of the game Minecraft.
-    \vspace*{-2mm}
-    \subsection{Ocarina of Time Randomizer\null\hfill August 2018 - Present}
-    Contributing to an Open Source project 'Ocarina of Time Randomizer', a rom hack played by thousands. My work consists of researching the functionality of the base game, then writing code injects my assembly code into the base game to add new features and options for players to enjoy.
-    \vspace*{-2mm}
-    \subsection{FRC FIRST Robotics\null\hfill August 2014 - May 2018}
-    Led a team of students as Programming Lead to program an FRC robot, which qualified for the world championships. Worked on PID, computer vision, distributed computing, and motion profiling.
-    \vspace*{-2mm}
+\section{Education}
+    {\textbf{University of Illinois Urbana Champaign}}\null\hfill\textbf{Exp. May 2022}\\
+    \emph{Bachelor of Science in Computer Engineering} \null\hfill \emph{Sophomore}\\
+    \vspace*{-4mm}\\
+    \textbf{Related Coursework}:\\ Computer Systems Engineering/Operating Systems [ECE 391] (IP) --- Data Structures [CS 225] (IP) --- Intro to Robotics [ECE 470] --- Digital Systems/FPGA design [ECE 385]
 \section{Technical Skills}
     \subsubsection{Programming Languages}
     Java, C/C\verb!++!, Python, SystemVerilog, php, Javascript, NodeJS
-    \vspace*{-4mm}
+    \vspace*{-2mm}
     \subsubsection{Tools/Frameworks}
-    AWS, Linux, docker, SQL, git, vim, \LaTeX, Laravel, Microsoft Office
-    \vspace*{-4mm}
-\section{Education}
-    {\large\textbf{University of Illinois Urbana Champaign}}\null\hfill (2018 - May 2022)\\
-    \emph{Bachelor of Science in Computer Engineering}\null\hfill 
-    \begin{center}
-        \textbf{Related Coursework} --- Computer Systems Engineering/Operating Systems [ECE 391] (In Progress) --- Data Structures [CS 225] (In Progress) --- Introduction to Robotics [ECE 470] --- Digital Systems/FPGA design [ECE 385] --- Analog Signical Processing [ECE220] --- Computer Systems \& Programming [ECE220]
-    \end{center}
+    AWS, Linux, docker, SQL, git, vim, Quartus, \LaTeX, Laravel, Microsoft Office
+    \vspace*{-2mm}
+\section{Work Experience}
+    \subsection{Quantum Corp \null\hfill May 2019 - Present}
+    \vspace*{-2mm}
+    \emph{Software Engineering Intern} \null\hfill \emph{}
+    \vspace*{1mm}
+
+    Working on Quantum Managed Services, a set of services which allows Quantum support to monitor and repair on-premise appliances remotely. Also created many automated cost analysis tools.
+    \vspace*{-2mm}
+    \subsection{UIUC ECE 385 Staff \null\hfill January 2020 - Present}
+    \vspace*{-2mm}
+    \emph{Undergrad Assistant} \null\hfill \emph{}
+    \vspace*{1mm}
+
+    Helping to lead two lab sections where I assist the teachers and answer student questions. Also leading office hour sections where I help students with their projects.
+    \vspace*{-2mm}
+    \subsection{Nebbiolo Technologies \null\hfill June - August 2018}
+    \vspace*{-2mm}
+    \emph{Software Engineering Intern} \null\hfill \emph{}
+    \vspace*{1mm}
+
+    Extended the data pipeline to allow for distributed analysis of the data, and upgraded the data visualizer to allow viewing from the cloud
+    \vspace*{-2mm}
+\section{Projects}
+    \subsection{3D Renderer in SystemVerilog on an FPGA \null\hfill November - December 2019}
+    \vspace*{-2mm}
+    Designed and developed a GPU on a CycloneIV FPGA capable of arbitrary texured 3D rendering, and used it within an Avalon SOC along with the Intel NIOS II processor to build a sample of the game Minecraft.
+    \vspace*{-2mm}
+    \subsection{Ocarina of Time Randomizer \null\hfill August 2018 - Present}
+    \vspace*{-2mm}
+    Contributing to an Open Source project 'Ocarina of Time Randomizer', a rom hack played by thousands. My work consists of researching the functionality of the base game, then writing code injects my assembly code into the base game to add new features and options for players to enjoy.
+    \vspace*{-2mm}
+    \subsection{IOT SmartHub \null\hfill August 2018 - December 2018}
+    \vspace*{-2mm}
+    Created a device built around an ESP32 which could gather data from sensors and turn on and off connected devices based on user inputed thresholds. Live sensor data was visualized on a web portal using Grafana
+    \vspace*{-2mm}
+    \subsection{FRC FIRST Robotics \null\hfill August 2014 - May 2018}
+    \vspace*{-2mm}
+    Led a team of students as Programming Lead to program an FRC robot, which qualified for the world championships. Worked on PID, computer vision, distributed computing, and motion profiling.
+    \vspace*{-2mm}
 \end{document}

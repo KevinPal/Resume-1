@@ -4,26 +4,36 @@
         "phone": "408-893-0826",
         "email": "kevinrp2@illinois.edu",
         "giturl": "https://github.com/KevinPal",
-        "gitnice": "github.com/KevinPal"
+        "gitnice": "github.com/KevinPal",
+        "address": "San Jose, California"
     },
     "academics": {
         "relevant_coursework": {
-            "cs": ["Computer Systems \\& Programming [ECE220]", "Analog Signical Processing [ECE220]", "Digital Systems/FPGA design [ECE 385]", "Introduction to Robotics [ECE 470]", "Data Structures [CS 225] (In Progress)", "Computer Systems Engineering/Operating Systems [ECE 391] (In Progress)"]
+            "cs": ["Digital Systems/FPGA design [ECE 385]", "Intro to Robotics [ECE 470]", "Data Structures [CS 225] (IP)", "Computer Systems Engineering/Operating Systems [ECE 391] (IP)"]
         },
         "school": "University of Illinois Urbana Champaign",
-        "degree": "Bachelor of Science in Computer Engineering"
+        "degree": "Bachelor of Science in Computer Engineering",
+        "year": "Sophomore",
+        "gradyear": "Exp. May 2022"
     },
     "career": {
         "experience": [
             {
-                "title": "Software Engineering Intern",
-                "organization": "Quantum Corp",
+                "role": "Software Engineering Intern",
+                "company": "Quantum Corp",
                 "date": "May 2019 - Present",
                 "description": "Working on Quantum Managed Services, a set of services which allows Quantum support to monitor and repair on-premise appliances remotely. Also created many automated cost analysis tools."
             },
             {
-                "title": "Software Engineering Intern",
-                "organization": "Nebbiolo Technologies",
+                "role": "Undergrad Assistant",
+                "company": "UIUC ECE 385 Staff",
+                "date": "January 2020 - Present",
+                "description": "Helping to lead two lab sections where I assist the teachers and answer student questions. Also leading office hour sections where I help students with their projects."
+
+            },
+            {
+                "role": "Software Engineering Intern",
+                "company": "Nebbiolo Technologies",
                 "date": "June - August 2018",
                 "description": "Extended the data pipeline to allow for distributed analysis of the data, and upgraded the data visualizer to allow viewing from the cloud"
 
@@ -36,19 +46,24 @@
             },
             {
                 "name": "Tools/Frameworks",
-                "skills": ["AWS", "Linux", "docker", "SQL", "git", "vim", "\\LaTeX", "Laravel", "Microsoft Office"]
+                "skills": ["AWS", "Linux", "docker", "SQL", "git", "vim", "Quartus", "\\LaTeX", "Laravel", "Microsoft Office"]
             }
         ],
         "projects": [
             {
                 "title": "3D Renderer in SystemVerilog on an FPGA",
                 "date": "November - December 2019",
-                "description": "Developed a GPU on a CycloneIV FPGA capable of arbitrary texured 3D rendering, and used it within an Avalon SOC along with the Intel NIOS II processor to build a sample of the game Minecraft."
+                "description": "Designed and developed a GPU on a CycloneIV FPGA capable of arbitrary texured 3D rendering, and used it within an Avalon SOC along with the Intel NIOS II processor to build a sample of the game Minecraft."
             },
             {
                 "title": "Ocarina of Time Randomizer",
                 "date": "August 2018 - Present",
                 "description": "Contributing to an Open Source project 'Ocarina of Time Randomizer', a rom hack played by thousands. My work consists of researching the functionality of the base game, then writing code injects my assembly code into the base game to add new features and options for players to enjoy."
+            },
+            {
+                "title": "IOT SmartHub",
+                "date": "August 2018 - December 2018",
+                "description": "Created a device built around an ESP32 which could gather data from sensors and turn on and off connected devices based on user inputed thresholds. Live sensor data was visualized on a web portal using Grafana"
             },
             {
                 "title": "FRC FIRST Robotics",
