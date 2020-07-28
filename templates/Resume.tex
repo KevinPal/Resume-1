@@ -3,7 +3,7 @@
 \usepackage{vwcol}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.6in]{geometry}
 \usepackage{listings}
 \usepackage{enumitem}
 \usepackage[nodayofweek, level]{datetime}
@@ -36,15 +36,14 @@
 %% for skillset in skillsets:
     \\VAR{'subsubsection' if config.short_skills else 'subsection' }{\VAR{skillset.name}}
     \VAR{skillset.skills}
-    \vspace*{-2mm}
+    \vspace*{-5mm}
 %% endfor
+\vspace*{4mm}
 \section{Work Experience}
 %% for experience in experiences:
     \subsection{\VAR{experience.company} \null\hfill \VAR{experience.date}}
     \vspace*{-2mm}
-    \emph{\VAR{experience.role}} \null\hfill \emph{\VAR{experience.location}}
-    \vspace*{1mm}
-
+    \emph{\VAR{experience.role}} \null\hfill \emph{}\\
     \VAR{experience.description}
     \vspace*{-2mm}
 %% endfor
