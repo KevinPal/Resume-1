@@ -1,5 +1,5 @@
 all:
-	venv/bin/python3 resume.py
+	python resume.py
 	pdflatex Resume.tex
 
 clean:

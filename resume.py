@@ -44,7 +44,7 @@ skillsets = me['career']['skillsets']
 for skillset in skillsets: # comma separating skills from skillsets
     skillset["skills"] = ", ".join(skillset["skills"])
 
-coursework = " --- ".join([x for x in reversed(me['academics']['relevant_coursework']['cs'])])
+coursework = " --- ".join([x for x in list(me['academics']['relevant_coursework']['cs'])])
 user = me['user']
 
 with open('Resume.tex', 'w+') as f:
